@@ -54,11 +54,11 @@ int main(void)
     boot1 = READ_BIT(GPIOB->IDR, GPIO_IDR_IDR2);
     checkUserCode = CheckUserCode(FIRMWARE_COPY_ADDR);
 
-    if ((magic_word == 0x424C) || boot1 || checkUserCode == 0) 
-		{
-        USB_HW_Init();
-    } 
-		else 
+//    if ((magic_word == 0x424C) || boot1 || checkUserCode == 0) 
+//		{
+//        USB_HW_Init();
+//    } 
+//		else 
 		{
         EnterProgram();
         // Never reached
